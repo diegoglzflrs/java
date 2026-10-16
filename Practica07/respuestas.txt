@@ -1,0 +1,6 @@
+1. ¿Cuál es la diferencia entre una excepción chequeada y una no chequeada? ¿Por qué PersonajeNuloException extiende RuntimeException y no Exception?
+- El compilador obliga que se maneje una excepción chequeada con try-catch o a declarala con throws, mientras que no obliga a revisar una excepción no chequeada. PersonajeNuloException se extiende RuntimeException porque intentar usar un personaje nulo es un error de lógica en el flujo del código, no de estructura.
+2. ¿Para qué sirve el bloque finally? Da un ejemplo real de cuándo es indispensable.
+- Para ejecutar un bloque de código sin importar si ocurrió una excepción o no. Un ejemplo real sería cerrar una conexión a una base de datos o un archivo. Si el programa falla leyendo los datos, el archivo debe cerrarse sí o sí para no congelar la memoria del servidor.
+3. ¿Cuál es la diferencia entre throw y throws? Muestra un ejemplo de cada uno tomado de este laboratorio.
+- throw se usa para lanzar una excepción en una línea de código específica. throws se usa en el caso de que un método llegue a fallar con la excepción.

@@ -1,0 +1,9 @@
+¿Cuál es la diferencia entre ArrayList y LinkedList? Describe un escenario concreto del juego donde preferirías cada uno.
+- ArrayList usa un arreglo/array, mientras que LinkedList usa nodos conectados.
+- Se usaría ArrayList para el roster del gremio, para el recorrido y consultas frecuentes y casi no cambia. Se usaría LinkedList para la cola de turnos, porque siempre se agrega al final y sale del frente.
+¿Por qué HashMap no garantiza un orden de inserción al imprimir con entrySet()? ¿Qué colección usarías si el orden importa?
+- Porque acomoda los elementos en memoria interna usando el hashCode de la clave, no el orden de llegada. 
+- Si el orden de inserción importa, debes usar LinkedHashMap.
+¿Qué ventaja tiene HashSet sobre ArrayList para registrar habilidades únicas? ¿Qué pierdes al usar HashSet?
+- Ventaja: HashSet bloquea duplicados de inmediato y verifica si una habilidad existe. 
+- Al usarlo pierdes el orden en que se aprendieron las habilidades y el acceso por número de índice.
