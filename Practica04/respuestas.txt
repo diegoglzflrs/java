@@ -1,0 +1,13 @@
+1. ¿Cuál es la diferencia entre extends e implements? ¿Cuándo usas cada uno?
+- extends se usa para herencia entre clases, mientras que implements se usa para que una clase cumpla con la interfaz
+2. ¿Qué ventaja tiene llamar super.atacar() dentro de Guerrero.atacar() en lugar de reescribir todo?
+- Limpieza y mantenibilidad. Al hacer esto, no es necesario copiar el código que se encuentra en Personaje. Al hacer esto, se aplica automaticamente a la clase actual.
+3. Si declaras una variable Personaje p = new Guerrero(...) y llamas p.atacar(), ¿qué método se ejecuta, el de Personaje o el de Guerrero? ¿Por qué?
+Se ejecuta la función de Guerrero. El compilador busca si Personaje tiene un método llamado atacar(). Si existe, el código compila sin errores. Sin embargo, como Guerrero sobrescribió el método, se ejecuta esta.
+4. Agrega la explicacion de conceptos y temas vistos en clase
+-   Interfaz: Un contrato que define un conjunto de métodos para las clases, especificando el "qué" pero no el "cómo".
+    Herencia: El mecanismo de permitir que una subclase/clase hija use los atributos y métodos de otra clase, como una clase padre
+    implements: Une una clase con una interfaz, dándole por obligación todos los métodos que existen en ella
+    Extends: Une una clase hija con una clase padre, hereda atributos y métodos
+    super: Palabra clave que hace referencia a la clase padre. Se puede usar para llamar su constructor o sus métodos.
+    @Override: Anotación que indica que un método va a reemplazar el método original heredado de la interfaz.

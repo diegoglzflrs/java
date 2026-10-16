@@ -1,0 +1,8 @@
+¿Por qué declaramos los atributos como private y no como public?
+- Para proteger y encapsular los datos, para que otras clases no modifiquen directamente los atributos de una clase
+
+¿Qué pasaría si quitaras el super() del constructor de Perro?
+- Da un error porque no tiene a un constructor al que llamar
+
+¿Qué ventaja tiene sobreescribir toString() en lugar de crear un método con otro nombre?
+- Java automáticamente utiliza toString() si intentamos imprimir un objeto con System.out.println()

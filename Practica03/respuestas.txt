@@ -1,0 +1,7 @@
+1. ¿Cuál es la diferencia entre private y protected? ¿En qué situación usarías cada uno?
+- Una variable private solo es accesible dentro de la misma clase donde se declaró. Se usa si es un detalle interno que las subclases no necesitan modificar
+  Una variable protected se puede acceder dentro de la misma clase, el mismo paquete y otras subclases. Se usa si se quiere que otras subclases puedan modificarlos sin hacer uso del getter o setter de la clase padre.
+2. ¿Por qué marca y modelo no tienen setter? ¿Qué implica eso en el diseño?
+- Las variables marca y modelo son datos que definen la identidad del vehículo, no necesitan cambiar después de haber construido un objeto. Esto implica que a un objeto no se le puede cambiar la identidad bajo ninguna circunstancia.
+3. ¿Qué pasaría si un setter no tuviera validación y alguien pusiera un año negativo?
+- No existiría algun error que rompa el programa o la compilación.

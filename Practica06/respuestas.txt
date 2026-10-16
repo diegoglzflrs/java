@@ -1,0 +1,6 @@
+1. ¿Por qué Personaje debe ser abstracta y no concreta? ¿Qué problema resuelve?
+- Porque Personaje representa un concepto incompleto. Declararla abstract obliga a cada subclase a definir su propia lógica de ataque.
+2. ¿Qué ventaja tiene que Druida implemente dos interfaces? ¿Podría extender dos clases en lugar de implementar dos interfaces?
+- Ventaja: Le da dos capacidades independientes sin repetir código. No podría extender dos clases porque Java no permite herencia múltiple de clases, pero sí de interfaces.
+3. Si agregas un nuevo personaje Paladín que cura y combate físicamente, ¿qué clase extiende y qué interfaces implementa? ¿Tienes que modificar algo en las clases existentes?
+- Extiende Personaje ya que es un personaje de combate como los demás, e implementa Sanador porque cura. No hay que agregar ni modificar nada existente.

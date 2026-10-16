@@ -1,0 +1,6 @@
+1. ¿Cuál es la diferencia entre sobreescritura (@Override) y sobrecarga (overload)? Da un ejemplo de cada uno tomado de este laboratorio.
+- La sobreescritura redefine un método que ya existía en la superclase con los mismos parametros. La sobrecarga cambia el comportamiento de métodos que comparten nombre pero tienen parametros diferentes de tipo o número.
+2. Si tienes Personaje p = new Mago(...) y llamas p.calcularDanio(), ¿Java usa el método de Personaje o el de Mago? ¿Por qué?
+- Se usa Mago porque la referencia Personaje solo determina qué métodos son visibles en tiempo de compilación, pero el método que se ejecuta depende del tipo del objeto en tiempo de ejecución.
+3. ¿Para qué sirve instanceof? ¿En qué situaciones lo usarías en un sistema real?
+- Sirve para verificar si un objeto pertenece a una clase específica o si implementa una interfaz durante la ejecución. Se usaría en casos donde se utilizan listas, o donde debemos elegir eventos.
