@@ -1,0 +1,18 @@
+1. ¿Cuál es la diferencia entre FileWriter(archivo) y FileWriter(archivo, true)? ¿Qué pasaría con la bitácora si usaras el primero?
+- FileWriter(archivo) sobrescribe por completo el contenido existente del archivo cada vez que se abre, mientras que FileWriter(archivo, true) activa el modo "append" para añadir los datos al final sin borrar lo anterior. 
+- Si usaras el primero para una bitácora, perderías todo el historial de registros anteriores cada vez que ejecutas el programa.
+2. ¿Por qué es importante verificar si un archivo existe antes de leerlo? ¿Qué excepción lanzaría Java si intentas leer un archivo que no existe sin verificar?
+- Para evitar que el programa se detenga de repente por errores de ejecución y para manejar la situación de forma controlada. 
+- Si intentaras leer un archivo inexistente sin verificar, Java lanzaría la excepción FileNotFoundException
+3. ¿Qué ventaja tiene BufferedReader sobre leer el archivo directamente con FileReader? ¿Qué hace el "buffer" en este contexto?
+- La ventaja de BufferedReader es que mejora el rendimiento y la velocidad de lectura al reducir el número de operaciones directas en el disco duro. 
+- En este contexto, el "buffer" funciona como una memoria temporal que almacena un bloque grande de datos de una sola vez para que el programa lea los carácteres desde la RAM en vez de acceder al disco cada vez.
+4. ¿Definir Enums en java, para que sirven investigar y listar en documento las clases similares a BufferedReader y BufferedWriter y FileReader y FileWriter?
+- Un Enum es un tipo de dato especial que se utiliza para definir un conjunto fijo de constantes con nombre, lo cual sirve para hacer el código más organizado y fácil de leer al evitar textos mal escritos.
+- newBufferedReader: Es similar a BufferedReader. Su función es crear un lector de texto con almacenamiento en memoria interna para mejorar el rendimiento. 
+    - Pertenece a la API moderna de Java (java.nio.file).
+- newBufferedWriter: Es similar a BufferedWriter. Funciona igual para escribir texto de forma eficiente acumulando los datos en memoria antes de mandarlos al disco, pero usa estructura moderna de archivos de Java para un mejor manejo de errores.
+- FileInputStream: Es similar a FileReader, pero, a diferencia de FileReader la cual lee caracteres de texto, FileInputStream lee bytes. Se utiliza para abrir conexiones a archivos que no son texto plano, tales como imágenes, audios, videos, etc.
+- FileOutputStream: Es similar a FileWriter. En lugar de escribir texto, escribe bytes directamente en el disco.
+- BufferedInputStream: Es similar a BufferedReader. Su función es leer una cantidad grande de bytes del FileInputStream y los guarda en una memoria temporal para acelerar la lectura de archivos pesados.
+- BufferedOutputStream: Es similar a BufferedWriter. Acumula los bytes que genera el programa en una memoria y, cuando el buffer se llena o se ordena manualmente, realiza una única escritura masiva hacia el FileOutputStream.

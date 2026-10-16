@@ -1,0 +1,8 @@
+1. ¿Cuál es la diferencia entre extends Thread e implements Runnable? ¿Cuándo preferirías uno sobre el otro?
+- Con extends Thread, la clase es un hilo. El comando implements Runnable solo define la tarea y lo pasa a un Thread. 
+2. ¿Qué es una race condition? Explica con el ejemplo del ContadorCompartido por qué el resultado sin synchronized puede ser menor a 5000.
+- Una falla en el software o sistema donde el output depende de una secuencia incontrolable o resultados inconsistentes.
+- En ContadorCompartido, contador++ no es una sola operación sino tres (leer el valor, sumarle 1 y escribirlo), entonces si dos hilos leen el mismo valor, como 100, ambos escriben 101 y un incremento se pierde. Eso sucede muchas veces durante la ejecución, por eso el total sin synchronized puede quedar por debajo de 5000.
+3. ¿Para qué sirve join()? ¿Qué pasaría si quitaras los join() del bloque 3 antes de llamar tabla.mostrarResultados()?
+- Join() sirve para hacer que el hilo que lo llama espere hasta que el hilo indicado termine su ejecución.
+- Si se eliminaran los join() del bloque 3, la clase main seguiría y llamaría a tabla.mostrarResultados() mientras los combates aún corren, causando que la tabla salga vacía o incompleta.
