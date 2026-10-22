@@ -1,0 +1,9 @@
+1. ¿Cuál es la diferencia entre una aplicación de consola (Labs 01–10) y una aplicación web? ¿Qué ventajas tiene la web?
+- Una aplicación de consola corre en la máquina de usuario y está limitado a solo texto y un solo usuario. 
+- Una aplicaión web corre en un servidor y se corre desde un navegador con peticiones HTTP, tiene una interfaz más avanzada y varios usuarios pueden acceder al mismo tiempo
+2. Explica con tus palabras qué hace cada capa del MVC en este laboratorio. ¿Qué pasaría si el Controller devolviera el nombre incorrecto de la plantilla?
+- El modelo (model/Aventurero.java) representa los datos y su estrctura. El controlador (controller/SaludoController.java) recibe la petición de Aventurero, prepara los datos y los pasa a la vista, la cual es la plantilla HTML aventurero.html.
+- Si el controller devolviera el nombre incorrecto de la plantilla, Spring no encontraría el archivo y lanzaría un error 500 TemplateInputException (la ruta si existe pero la vista no).
+3. ¿Por qué crees que Thymeleaf puede mostrar el HTML sin el servidor activo? ¿Qué ventaja tiene eso para el desarrollo?
+- Thymeleaf usa los atributos "th:" dentro de etiquetas HTML normales, y el navegador ignora los atributos desconocidos. 
+- Ventaja: Se puede revisar y ajustar el diseño visual sin tener que correr la aplicación, y el archivo sigue funcionando.
