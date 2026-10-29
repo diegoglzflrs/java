@@ -1,0 +1,8 @@
+1. ¿Qué hace @Entity? ¿Por qué se requiere el constructor vacío?
+- La anotación @Entity le dice a JPA/Hibernate que una clase de Java representa una tabla en la base de datos. Cada atributo es una columna y cada objeto es una fila. Así se crea contacto automáticamente.
+- El constructor vacío es necesario porque cuando Hibernate lee filas de la base de datos, crea el objeto con new Contacto() mediante reflexión y después llena cada campo con los setters.
+2. ¿Por qué ContactoRepository no tiene ningún método escrito pero aun así puedes llamar findAll() y save()?
+- Porque hereda de una interfaz de Spring Data JPA, como JpaRepository o CrudRepository. 
+3. ¿Qué diferencia hay entre @GetMapping y @PostMapping? ¿Cuándo usarías cada uno?
+- GET es para pedir y mostrar información sin cambiar nada, como la lista o un formulario.
+- POST es enviar datos que modifican algo en el servidor, como guardar, actualizar o eliminar.
